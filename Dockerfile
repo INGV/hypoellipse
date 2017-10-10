@@ -70,3 +70,6 @@ RUN mv rnd.f rnd.f.original \
 # Compile hypoellipse
 WORKDIR /opt/hypoellipse/source
 RUN make
+
+# Run Hypoc
+ENTRYPOINT ["/opt/hypoellipse/source/Hypoel"]
