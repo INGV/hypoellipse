@@ -26,7 +26,8 @@ RUN apt-get update \
         make \
         build-essential \
         ftp \
-        fort77
+        fort77 \
+        gfortran
 
 # Set 'root' pwd
 WORKDIR /opt
@@ -39,7 +40,7 @@ RUN echo "" >> /root/.bashrc \
      && echo "alias ll='ls -l --color'" >> /root/.bashrc \
      && echo "" >> /root/.bashrc \
      && echo "export LC_ALL=\"C\"" >> /root/.bashrc \
-     && echo "" >> /root/.bashrc \
+     && echo "" >> /root/.bashrc 
 
 # Get hypoellipse
 WORKDIR /opt
@@ -48,8 +49,24 @@ RUN wget https://pubs.usgs.gov/of/1999/ofr-99-0023/HYPOELLIPSE_UNIX_Downloads.ta
 
 # For Debian version?!?!?!
 WORKDIR /opt
-RUN wget http://jclahr.com/science/software/hypoellipse/hypoel/unix_version/source/linux/hypoe.c \
+RUN mkdir debian \
+     && cd debian \
+     && wget http://jclahr.com/science/software/hypoellipse/hypoel/unix_version/source/linux/hypoe.c \
      && wget http://jclahr.com/science/software/hypoellipse/hypoel/unix_version/source/linux/listen_serv.c \
      && wget http://jclahr.com/science/software/hypoellipse/hypoel/unix_version/source/linux/makefile \
      && wget http://jclahr.com/science/software/hypoellipse/hypoel/unix_version/source/linux/setup_server.c \
      && wget http://jclahr.com/science/software/hypoellipse/hypoel/unix_version/source/linux/squish_uacal.c
+
+# Substitute 'f77' to 'gfortran'
+WORKDIR /opt/hypoellipse/source 
+RUN mv makefile makefile.original \
+     && cat makefile.original | sed 's/f77/\/usr\/bin\/gfortran/' > makefile
+
+# bugfix on 'rnd.f' function
+WORKDIR /opt/hypoellipse/source
+RUN mv rnd.f rnd.f.original \
+     && cat rnd.f.original | sed 's/function rnd/function rnd\(\)/g' > rnd.f
+
+# Compile hypoellipse
+WORKDIR /opt/hypoellipse/source
+RUN make
