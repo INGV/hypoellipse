@@ -4,9 +4,9 @@ output
 stdout
 screen
 y
-output.sum
+../output/output.sum
 y
-output.arc
+../output/output.arc
 n
 n
 jump default.cfg
