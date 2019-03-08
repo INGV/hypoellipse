@@ -16,13 +16,13 @@ $ docker build --tag hypoellipse .
 ### Run docker
 Run:
 ```
-$ docker run -it hypoellipse 
+$ docker run -it --rm -v $( data )/data:/opt/data hypoellipse filecom
 ```
 
 #### Docker CLI
 To override the `ENTRYPOINT` directive and enter into the Docker images, run:
 ```
-$ docker run -it --entrypoint=bash hypoellipse
+$ docker run -it --rm --entrypoint=bash hypoellipse
 ```
 
 # Contribute
