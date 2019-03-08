@@ -16,7 +16,7 @@ $ docker build --tag hypoellipse .
 ### Run docker
 Run:
 ```
-$ docker run -it --rm -v $( data )/data:/opt/data hypoellipse filecom
+$ docker run -it --rm -v $( pwd )/data:/opt/data hypoellipse filecom
 ```
 
 #### Docker CLI
