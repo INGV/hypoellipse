@@ -1,0 +1,13 @@
+! crust model IPO     MORE
+!
+!
+!                      Vp   depth Vp/Vs Appennino
+VELOCITY               5.1   0.0  1.78
+VELOCITY               5.7   3.0  1.78
+VELOCITY               6.2   6.0  1.78
+VELOCITY               6.5  13.0  1.78
+VELOCITY               5.7  20.0  1.78
+VELOCITY               7.8  34.0  1.78
+VELOCITY               8.0  50.0  1.78
+VELOCITY               8.2 100.0  1.78
+VELOCITY               8.5 500.0  1.78

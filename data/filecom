@@ -1,0 +1,17 @@
+stdin
+y
+output
+stdout
+screen
+y
+output.sum
+y
+output.arc
+n
+n
+jump default.cfg
+jump temp.vel
+begin station list +1 19800101
+jump temp.sta
+arrival times next
+jump temp.phs
