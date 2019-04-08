@@ -6,15 +6,15 @@ More info here:
 - https://pubs.usgs.gov/of/1999/ofr-99-0023/
 
 ## Quickstart
-### Build docker
-Clone this repository, then:
+### Build docker image
+Clone this repository, then create hypoellipse docker image:
 ```
 $ cd hypoellipse
 $ docker build --tag hypoellipse . 
 ```
 
-### Run docker
-Run:
+### Run docker container
+Run docker container from hypoellipse image:
 ```
 $ docker run -it --rm -v $( pwd )/example:/opt/data hypoellipse filecom
 ```
