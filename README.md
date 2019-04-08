@@ -7,8 +7,8 @@ More info here:
 
 ## Quickstart
 ### Build docker
+Clone this repository, then:
 ```
-$ git clone https://github.com/INGV/hypoellipse.git 
 $ cd hypoellipse
 $ docker build --tag hypoellipse . 
 ```
