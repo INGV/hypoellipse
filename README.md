@@ -1,4 +1,4 @@
-# docker_hypoellipse
+# hypoellipse
 
 Docker used to run HYPOELLIPSE: A Computer Program for Determining Local Earthquake Hypocentral Parameters, Magnitude, and First-Motion Pattern
 
@@ -8,8 +8,8 @@ More info here:
 ## Quickstart
 ### Build docker
 ```
-$ git clone git@gitlab.rm.ingv.it:uf/docker_hypoellipse.git
-$ cd docker_hypoellipse
+$ git clone https://github.com/INGV/hypoellipse.git 
+$ cd hypoellipse
 $ docker build --tag hypoellipse . 
 ```
 
