@@ -10,19 +10,19 @@ More info here:
 Clone this repository, then create hypoellipse docker image:
 ```
 $ cd hypoellipse
-$ docker build --tag hypoellipse . 
+$ docker build --tag ingv/hypoellipse . 
 ```
 
 ### Run docker container
 Run docker container from hypoellipse image:
 ```
-$ docker run -it --rm -v $( pwd )/example:/opt/data hypoellipse filecom
+$ docker run -it --rm -v $( pwd )/example:/opt/data ingv/hypoellipse filecom
 ```
 
 #### Docker CLI
 To override the `ENTRYPOINT` directive and enter into the Docker images, run:
 ```
-$ docker run -it --rm --entrypoint=bash hypoellipse
+$ docker run -it --rm --entrypoint=bash ingv/hypoellipse
 ```
 
 # Contribute
