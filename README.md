@@ -20,17 +20,36 @@ More info here:
 - https://pubs.usgs.gov/of/1999/ofr-99-0023/
 
 ## Quickstart
-### Build docker image
-Clone this repository, then create hypoellipse docker image:
+### Clone the repository
+First, clone the git repositry:
 ```sh
+$ git clone https://github.com/INGV/hypoellipse.git
 $ cd hypoellipse
+```
+
+### Docker image
+To obtain *hypoellipse* docker image, you have two options:
+
+#### 1) Get built image from DockerHub (*preferred*)
+Get the last built image from DockerHub repository:
+```
+$ docker pull ingv/hypoellipse:latest
+```
+
+#### 2) Build by yourself
+```
 $ docker build --tag ingv/hypoellipse . 
 ```
 
-### Run docker container
-Run docker container from hypoellipse image:
+in case of errors, try:
+```
+$ docker build --no-cache --pull --tag ingv/hypoellipse . 
+```
+
+### Run docker
+Run:
 ```sh
-$ docker run -it --rm -v $( pwd )/example:/opt/data ingv/hypoellipse filecom
+$ docker run --rm -v $( pwd )/example:/opt/data ingv/hypoellipse filecom
 ```
 
 #### Docker CLI
