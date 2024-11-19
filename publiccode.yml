@@ -1,0 +1,58 @@
+# This repository adheres to the publiccode.yml standard by including this 
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.4.0'
+name: 'INGV - hypoellipse' 
+releaseDate: '2024-11-19'
+url: 'https://github.com/INGV/hypoellipse'
+logo: images/ingv_logo_text_two_lines.png
+landingURL: 'https://github.com/INGV/hypoellipse'
+softwareVersion: v1.0.0
+developmentStatus: stable
+softwareType: standalone/other
+platforms:
+  - windows
+  - mac
+  - linux
+usedBy:
+  - INGV
+categories:
+  - data-analytics
+  - data-collection
+maintenance:
+  type: internal
+  contacts:
+    - name: Valentino Lauciani
+      email: valentino.lauciani@ingv.it
+legal:
+  repoOwner: 'Istituto Nazionale di Geofisica e Vulcanologia - INGV'
+  license: 'AGPL-3.0-or-later'
+intendedAudience:
+  scope:
+    - research
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - en
+it:
+  countryExtensionVersion: '0.2'
+  riuso:
+    codiceIPA: ingv
+description:
+  en:
+    shortDescription: >-
+      Docker used to run hypoellipse: a Computer Program for Determining Local Earthquake Hypocentral Parameters, Magnitude, and First-Motion Pattern. 
+    documentation: 'https://github.com/INGV/hypoellipse/blob/master/README.md'
+    longDescription: >
+      Hypoellipse is a Computer Program for Determining Local Earthquake Hypocentral Parameters, Magnitude, and First-Motion Pattern
+      
+      Lorem ipsum odor amet, consectetuer adipiscing elit. Congue facilisi sagittis iaculis 
+      urna sagittis nascetur mollis. Aptent auctor finibus ut donec scelerisque morbi elit etiam fusce. 
+      Ante hendrerit cursus rutrum sapien cras commodo vivamus ad. Nunc quisque sit aptent potenti in nascetur. 
+      Finibus at semper torquent sollicitudin facilisi nunc inceptos. Lacinia nibh class sagittis 
+      ultrices nisi eleifend nibh vehicula. Rhoncus urna aliquam ligula accumsan aliquet turpis. 
+      Mollis cubilia proin dictumst, felis ridiculus tincidunt ac? Metus felis pharetra bibendum hac montes sit mi.
+    localisedName: 'hypoellipse'
+    features:
+      - Seismic hypocenter and magnitude calculator
